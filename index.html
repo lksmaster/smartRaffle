@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Importing css styles -->
+  <link rel="stylesheet" href="./index.css" />
+  <title>SmartRifa</title>
+</head>
+<!------------------------------------------------------------>
+
+<body>
+  <!-- TELA BILHETE ------------------------------------------->
+  <section class="telaBilhetes">
+    <div class="row">
+      <div class="column" style="background-color:rgb(175, 175, 175);">
+        <!-- BILHETES LABEL -->
+        <section class="section-header">
+          <h1>BILHETES</h1>
+        </section>
+        <!-- SELECIONAR RIFA -->
+        <form>
+          <p>Rifa</p>
+          <input type="text" id="titulo">
+          <!-- NOME INPUT -->
+          <p>Nome</p>
+          <input type="text" id="nome">
+          <!-- BOTAO COMPRAR -->
+          <input type="button" value="COMPRAR" id="comprar" />
+        </form>
+        <!----------------------------------------------------->
+      </div>
+      <div class="column" style="background-color:rgb(175, 175, 175);">
+        <!-- ORNANIZADOR LABEL -->
+        <section class="section-header">
+          <h1>ORGANIZADOR</h1>
+        </section>
+        <!-- BOTAO CRIAR RIFA -->
+        <form>
+          <input type="button" value="CRIAR NOVA RIFA" id="para_criar" />
+        </form>
+        <!-- BOTAO SORTEAR -->
+        <form>
+          <label>Sua Rifa:</label>
+          <input type="text" id="draw_titulo">
+          <input type="button" value="SORTEAR BILHETE" id="sortearButton" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+ <!-- TELA CRIAR ------------------------------------------------>
+  <section class="telaCriar" style="background-color:rgb(175, 175, 175);">
+    <form>
+      <!-- TITULO INPUT -->
+      <p>Titulo</p>
+      <input type="text" id="criar_titulo">
+      <!-- PREMIO INPUT -->
+      <p>Prêmio</p>
+      <input type="number" step="0.01" id="criar_premio">
+      <!-- PRECO DO BILHETE -->
+      <p>Preço do bilhete:</p>
+      <input type="number" step="0.001" id="preco_bilhete">
+      <!-- MULTIPLE INPUT -->
+      <p>Permitir mais de um bilhete por pessoa?</p>
+      <select type="text" id="criar_multiple">
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+      </select>
+      <!-- BOTAO COMPRAR -->
+      <input type="button" value="CRIAR" id="criarButton" />
+    </form>
+    <form>
+      <input type="button" value="VOLTAR" id="voltar_criar" />
+    </form>
+  </section>
+
+  <!-- PARTE DE BAIXO ------------------------------->
+  <div class="row">
+    <div class="column" style="background-color:rgb(230, 230, 230);">
+    <form>
+      <p>Rifas atuais:</p>
+      <label id = "rifas"></label>
+    </form>
+    </div>
+
+    <div class="column" style="background-color:rgb(230, 230, 230);">
+    <form>
+      <p>Rifas finalizadas:</p>
+      <label id = "resultados"></label>
+    </form>
+    </div>
+  </div>
+  <input type="button" value="ATUALIZAR" id="atualizarButton" />
+
+</body>
+<!------------------------------------------------------------>
+<footer>
+  <!-- Importing Ethers.js script -->
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+  <!-- Importing javascript file -->
+  <script src="./index.js"></script>
+</footer>
+
+</html>
