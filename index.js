@@ -5,7 +5,7 @@ let signer;
 let signer_address;
 
 // 2. Configuração do endereço do contrato e ABI
-const Factory_Contract_Address = "0x8f6a7a8Aee3EAF02eA086197d731e0DfF0a60960";
+const Factory_Contract_Address = "0xBd6eb1eD51f253F383Dc544588cb9159e82F0b0d";
 const Factory_Contract_ABI =[
 	{
 		"inputs": [
